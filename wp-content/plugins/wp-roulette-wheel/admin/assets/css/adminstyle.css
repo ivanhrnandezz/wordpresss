@@ -1,0 +1,204 @@
+/**
+*
+* CSS File that styles the Admin Settings Panel of the Plugin
+* 
+* TABLE OF CONTENTS:
+* 1. General CSS Styles
+* 2. Library Style Changes
+* 3. Admin Menu Styling
+* 4. Misc. Style Settings
+* * 4.1 Generate Coupon Box
+* * 4.2 Sliders
+* * 4.3 Hide Settings Controlled by Sliders
+* * 4.4 Input Shortcode Live Wheel Preview
+* 5. Pop-Up Preview Container
+* 6. Style Presets
+* 7. Animations
+*
+*/
+
+/* 1. General CSS Styles */
+.wprw_padding5{
+	padding:5px;
+}
+.wprw_margintop5{
+	margin-top:5px;
+}
+.wprw_margintop10{
+	margin-top:10px;
+}
+.wprw_margintop20{
+	margin-top:20px;
+}
+.wprw_flexjustifycenter{
+	display:flex;
+	justify-content:center;
+}
+.wprwhidden{
+	display: none;
+}
+
+/* 2. Library Style Changes */
+#wprw_admin_form .noUi-value-horizontal {
+	margin-top: 5px;
+}
+.plyr{
+	border-radius: 4px;
+    box-shadow: 0 2px 15px rgba(0,0,0,.1);
+    margin: 16px auto;
+}
+
+/* 3. Admin Menu Styling (CSS file enqueued only in this plugin's specific admin slug)*/
+#wpcontent{
+	background-color: #f1f1f1;
+	padding:20px;
+}
+#wpfooter{
+	background-color: #f1f1f1;
+	position:unset;
+}
+#wpbody-content {
+    padding-bottom: 5px;
+}
+.form-table th{
+	padding: 20px 10px 20px 10px;
+}
+#wprw_admin_menu .active{
+	/* !important necessary to not make changes to the Semantic UI Library */
+	border-color: #d4d4d5 !important; 
+}
+#wprw_admin_form .checkbox input{
+	margin:0;
+}
+#wprw_admin_styles_column{
+	min-width: 470px;
+}
+
+/** 4. MISC STYLE SETTINGS **/
+/* 4.1 Generate Coupon Box */
+#wprw_generatecoupon_card{
+	width: 100%;
+}
+/* 4.2 Sliders */
+#wprw_win_probability_setting_slider{
+	width: 450px;
+}
+#wprw_time_spent_seconds_slider{
+	width: 400px;	
+}
+/* 4.3 Hide Settings Controlled by Sliders */
+#wprw_win_probability_setting_input, #wprw_time_spent_input, #wprw_wheel_size_setting_input{
+	display:none;
+}
+/* 4.4 Input Shortcode Live Wheel Preview */
+#wprw_livewheelpreview .wprw-spinner{
+	margin:auto;
+}
+/* Misc  */
+#wprw_reset_spin_counter_button{
+	min-height: 36px;
+}
+#wprw_download_users_button, #wprw_download_users_button .button, #wprw_download_emails_button{
+	min-height: 36px;
+}
+.wprw_minwidth150{
+	min-width: 150px;
+}
+
+/* 5. Pop-Up Preview Container - (right column)*/
+#wprw_popup_preview{
+	width: 795px;
+	height: 600px;
+	background: rgba(0, 0, 0, 0.78);
+	border-radius: 4px 0px 0px 4px;
+	border:3px solid #e3e3e3;
+}
+#wprw_popup_preview_left{
+	width: 94%;
+	height: 100%;
+	float:left;
+	display:flex;
+	align-items:center;
+	padding: 5px;
+}
+#wprw_wheel_preview {
+    position: relative;
+    background-position: center;
+    background-image: url(../images/wheel-preview.png);
+    background-color: #53371f;
+    background-size: 32em;
+    width: 32em;
+    max-width: 32em;
+    height: 32em;
+    padding: 3.5em;
+    border-radius: 25em;
+    box-shadow: 0 0 0.8em rgb(11, 11, 11);
+    font-size: 12px;
+}
+#wprw-btnSpinPreview{
+	width: 100%;
+    font-size: 1.5em;
+}
+#wprw_previewcenter{
+	display: flex;
+	align-items: center;
+}
+
+/* 6. Style Presets - (Left Column) */
+#wprw_styles_container{
+	display:grid;
+	grid-template-columns:1fr 1fr 1fr;
+}
+.wprw_stylepreset{
+	width:96%;
+	height: 125px;
+	margin:3px;	
+	box-shadow: 0 0 0.2em rgb(155, 155, 155);
+    border-radius: 3px;
+    display:flex;
+    align-items: flex-end;
+}
+#wprw_styles_container .wprw_stylepreset{
+	border: 0;
+}
+.wprw_style_label{
+	width: 100%;
+    background-color: #e3e3e3;
+    font-weight: bold;
+    justify-content: center;
+    display: flex;
+    padding: 3px;
+}
+.wprw_style_label .checkbox label{
+	color: #808080;
+}
+/* The "Custom Style" Pencil Icon */
+.wprw_custom_style_icon{
+	bottom: 25px;
+    position: absolute;
+    left: 25%;
+    color: #a98866;
+    font-size: 55px !important;
+    background: 0;
+}
+
+/* 7. Animations */
+.wprw_animations_container{
+	display:grid;
+	grid-template-columns:1fr 1fr 1fr;
+	margin-top:20px;
+}
+.wprw_animations_container .field{
+	display: flex;
+	justify-content: center;
+}
+.wprw_animations_container .checkbox label{
+	font-size: 16px;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,504 @@
+/**
+*
+* Main CSS file that styles both Admin and Public areas
+* TABLE OF CONTENTS:
+* 
+* 1. Style Presets  
+* 2. Pop-Up Background
+* 3. Pop-Up Content
+* 4. Forms
+* 5. Win / Lose PopUp Messages
+* 6. Modals
+* 7. Close Button
+* 8. Particles (Animation)
+* 9. Responsive Media Queries
+* 
+*/
+
+/* 1. Style Presets. Used both in Admin (for preview) and in the public Popup */
+
+/* Rose Gold Style Preset */
+.wprw_rose_gold{
+	background:linear-gradient(rgb(217, 167, 199), rgb(255, 252, 220));
+	border-right:3px solid #f1f1f1;
+}
+.wprw_rose_gold #wprw_main_popup_form label, .wprw_rose_gold #wprw_popup_header, .wprw_rose_gold #wprw_popup_header_icon{
+	color: #686868;
+}
+.wprw_rose_gold #wprw-btnSpin, .wprw_rose_gold #wprw-btnSpinPreview{
+	background-color: #f3798f;
+	color:#ffffff;
+}
+.wprw_rose_gold #wprw-btnSpin:hover, .wprw_rose_gold #wprw-btnSpinPreview:hover{
+	background-color: #d14d65;
+}
+.wprw_rose_gold .wprw-spinner, .wprw_rose_gold #wprw_wheel_preview{
+    box-shadow: 0 0 0.2em rgb(155, 155, 155), 0 0 0 5px #f0f0f0 inset;
+}
+
+/* Midnight Blue Style Preset */
+.wprw_midnight_blue{
+	background:linear-gradient(rgb(15, 12, 41), rgb(48, 43, 99), rgb(36, 36, 62));
+	border-right:3px solid #130f2f;
+}
+.wprw_midnight_blue #wprw_main_popup_form label, .wprw_midnight_blue #wprw_popup_header, .wprw_midnight_blue #wprw_popup_header_icon{
+	color: #f8f8f8;
+}
+.wprw_midnight_blue #wprw-btnSpin, .wprw_midnight_blue #wprw-btnSpinPreview{
+	background-color: #fec522;
+	color:#2e2e2e;
+}
+.wprw_midnight_blue #wprw-btnSpin:hover, .wprw_midnight_blue #wprw-btnSpinPreview:hover{
+	background-color: #d7aa29;
+}
+
+/* Cobalt Blue Style Preset */
+.wprw_cobalt_blue{
+	background: linear-gradient(rgb(24, 4, 4), rgb(16, 81, 118), rgb(26, 10, 10));
+	border-right: 3px solid #150000;
+}
+.wprw_cobalt_blue #wprw_main_popup_form label, .wprw_cobalt_blue #wprw_popup_header, .wprw_cobalt_blue #wprw_popup_header_icon{
+	color: #f8f8f8;
+}
+.wprw_cobalt_blue #wprw-btnSpin, .wprw_cobalt_blue #wprw-btnSpinPreview{
+	background-color: #ffd983;
+    color: #474747;
+}
+.wprw_cobalt_blue #wprw-btnSpin:hover, .wprw_cobalt_blue #wprw-btnSpinPreview:hover{
+	background-color: #ffcd5c;
+}
+.wprw_cobalt_blue .wprw-spinner, .wprw_cobalt_blue #wprw_wheel_preview{
+    box-shadow: 0 0 0.5em rgb(30, 30, 30), 0 0 0 3px #cbcbcb inset;
+}
+
+/* Underwater Blue Style Preset */
+.wprw_underwater_blue{
+	background: linear-gradient(rgb(67, 198, 172), rgb(25, 22, 84));
+	border-right: 2px solid #cbcbcb;
+}
+.wprw_underwater_blue #wprw_main_popup_form label, .wprw_underwater_blue #wprw_popup_header, .wprw_underwater_blue #wprw_popup_header_icon{
+	color: #f8f8f8;
+}
+.wprw_underwater_blue #wprw-btnSpin, .wprw_underwater_blue #wprw-btnSpinPreview{
+	background-color: #0e9557;
+    border: 1px solid #aeaeae;
+    color: #fafafa;
+}
+.wprw_underwater_blue #wprw-btnSpin:hover, .wprw_underwater_blue #wprw-btnSpinPreview:hover{
+	background-color: #076647;
+}
+
+/* Morning Blue Style Preset */
+.wprw_morning_blue{
+	background: linear-gradient(rgb(56, 150, 206), rgb(26, 69, 124));
+	border-right: 2px solid #cbcbcb;
+}
+.wprw_morning_blue #wprw_main_popup_form label, .wprw_morning_blue #wprw_popup_header, .wprw_morning_blue #wprw_popup_header_icon{
+	color: #f8f8f8;
+}
+.wprw_morning_blue #wprw-btnSpin, .wprw_morning_blue #wprw-btnSpinPreview{
+	background-color: #fec522;
+	color:#2e2e2e;
+}
+.wprw_morning_blue #wprw-btnSpin:hover, .wprw_morning_blue #wprw-btnSpinPreview:hover{
+	background-color: #f2aa28;
+}
+.wprw_morning_blue .wprw-spinner, .wprw_morning_blue #wprw_wheel_preview{
+	box-shadow: 0 0 0.5em rgb(30, 30, 30), 0 0 0 5px #e1e1e1 inset;
+}
+
+/* Night Sky Style Preset */
+.wprw_night_sky{
+	background: linear-gradient(rgb(0, 4, 40), rgb(0, 78, 146));
+	border-right: 2px solid #cbcbcb;
+}
+.wprw_night_sky #wprw_main_popup_form label, .wprw_night_sky #wprw_popup_header, .wprw_night_sky #wprw_popup_header_icon{
+	color: #f8f8f8;
+}
+.wprw_night_sky #wprw-btnSpin, .wprw_night_sky #wprw-btnSpinPreview{
+	background-color: #fec522;
+	color:#2e2e2e;
+}
+.wprw_night_sky #wprw-btnSpin:hover, .wprw_night_sky #wprw-btnSpinPreview:hover{
+	background-color: #dfb51c;
+}
+
+/* Purple Waters Style Preset */
+.wprw_purple_waters{
+	background: linear-gradient(rgb(54, 0, 51), rgb(11, 135, 147));
+	border-right: 2px solid #b8b8b8;
+}
+.wprw_purple_waters #wprw_main_popup_form label, .wprw_purple_waters #wprw_popup_header, .wprw_purple_waters #wprw_popup_header_icon{
+	color: #f8f8f8;
+}
+.wprw_purple_waters #wprw-btnSpin, .wprw_purple_waters #wprw-btnSpinPreview{
+	background-color: #212743;
+	color:#f8f8f8;
+}
+.wprw_purple_waters #wprw-btnSpin:hover, .wprw_purple_waters #wprw-btnSpinPreview:hover{
+	background-color: #363a4f;
+}
+
+/* Casino Purple Style Preset */
+.wprw_casino_purple{
+	background: linear-gradient(rgb(0, 0, 0), rgb(83, 52, 109));
+	border-right: 2px solid #111111;
+}
+.wprw_casino_purple #wprw_main_popup_form label, .wprw_casino_purple #wprw_popup_header, .wprw_casino_purple #wprw_popup_header_icon{
+	color: #f8f8f8;
+}
+.wprw_casino_purple #wprw-btnSpin, .wprw_casino_purple #wprw-btnSpinPreview{
+	background-color: #fec522;
+	color:#2e2e2e;
+}
+.wprw_casino_purple #wprw-btnSpin:hover, .wprw_casino_purple #wprw-btnSpinPreview:hover{
+	background-color: #ecaa33;
+}
+
+/* Winter Night Style Preset */
+.wprw_winter_night{
+	background: linear-gradient(rgb(236, 236, 236),rgb(1, 21, 59), rgb(1, 10, 24));
+	border-right: 2px solid #a3a3a3;
+}
+.wprw_winter_night #wprw_main_popup_form label, .wprw_winter_night #wprw_popup_header, .wprw_winter_night #wprw_popup_header_icon{
+	color: #f8f8f8;
+}
+.wprw_winter_night #wprw-btnSpin, .wprw_winter_night #wprw-btnSpinPreview{
+	background-color: #407c93;
+	color:#f8f8f8;
+}
+.wprw_winter_night #wprw-btnSpin:hover, .wprw_winter_night #wprw-btnSpinPreview:hover{
+	background-color: #1f4f62;
+}
+
+/* Cherry Flowers Style Preset */
+.wprw_cherry_flowers{
+	background: linear-gradient(rgb(186, 83, 112), rgb(244, 226, 216));
+	border-right: 3px solid #e1e1e1;
+}
+.wprw_cherry_flowers #wprw_main_popup_form label, .wprw_cherry_flowers #wprw_popup_header, .wprw_cherry_flowers #wprw_popup_header_icon{
+	color: #f8f8f8;
+}
+.wprw_cherry_flowers #wprw-btnSpin, .wprw_cherry_flowers #wprw-btnSpinPreview{
+	background-color: #bc5974;
+	color: #fafafa;
+}
+.wprw_cherry_flowers #wprw-btnSpin:hover, .wprw_cherry_flowers #wprw-btnSpinPreview:hover{
+	background-color: #81374b;
+}
+.wprw_cherry_flowers .wprw-spinner{
+	box-shadow: 0 0 0.4em rgb(26, 26, 26);
+}
+.wprw_cherry_flowers #wprw_wheel_preview{
+	box-shadow: 0 0 0.4em rgb(26, 26, 26);
+}
+
+/* Snow Blanket Style Preset */
+.wprw_snow_blanket{
+	background:linear-gradient(rgb(236, 233, 230), rgb(255, 255, 255));
+	border-right: 3px solid #b4b4b4;
+}
+.wprw_snow_blanket #wprw_main_popup_form label, .wprw_snow_blanket #wprw_popup_header, .wprw_snow_blanket #wprw_popup_header_icon{
+	color: #848484;
+}
+.wprw_snow_blanket #wprw-btnSpin, .wprw_snow_blanket #wprw-btnSpinPreview{
+	background-color: #7a8b97;
+	color: #fafafa;
+}
+.wprw_snow_blanket #wprw-btnSpin:hover, .wprw_snow_blanket #wprw-btnSpinPreview:hover{
+	background-color: #4d585f;
+}
+.wprw_snow_blanket .wprw-spinner{
+	box-shadow: 0 0 0.2em rgb(11, 11, 11);
+}
+.wprw_snow_blanket #wprw_wheel_preview{
+	box-shadow: 0 0 0.2em rgb(11, 11, 11);
+}
+
+/** 
+* 2. Pop-up background that takes up the entire screen with transparent black color. 
+* Initialised at 0 opacity, this opacity is changed in the wprwShowPopUp() function in wheelpopup.js
+*/
+#wprw-popUpBg{
+	position:fixed;
+	display:none;
+	width:100%; 
+	z-index:99999;
+	top:0%;
+	height:100%;
+	background-color:rgba(0, 0, 0, 0);
+	
+}
+#wprw-popUpBgPreview{
+	width:100%; 
+	z-index:99999;
+	height:100%;
+	background-color:rgba(0, 0, 0, 0);
+}
+
+.wprw_width100{
+	width: 100%;
+}
+
+/** 
+* 3. The actual pop-up content
+*/
+
+#wprw-popUpContent{
+	position:fixed;
+	height:100%;
+	z-index:999999;
+	visibility:hidden;
+	padding-right:10px;
+	padding-left:10px;
+	left:-100vw;
+	
+}
+#wprw-popUpContentPreview{
+	width:57%;
+	background:linear-gradient(rgb(15, 12, 41), rgb(48, 43, 99), rgb(36, 36, 62));
+	border-right: 3px solid #15132e;
+	height:100%;
+	z-index:999999;
+	padding-right:10px;
+	padding-left:10px;
+	display:flex;
+	align-items: center;
+}
+
+#wprw_popup_wheel_container_left{
+	display: flex;
+	justify-content: center;
+	margin:0;
+}
+#wprw_popup_wheel_container_right{
+	display: flex;
+	margin:0;
+}
+#wprw_popup_header_container{
+	align-self: center;
+	transition: all 0.5s ease 0s;
+	max-width: 100%;
+	display:table;
+	background:0;
+	width: auto;
+	position: static;
+}
+
+/* 4. Forms */
+
+#wprw_main_popup_form{
+	font-size: 15px;
+	transition: all 0.5s ease 0s;
+}
+#wprw_main_popup_form .checkbox, #wprw_main_popup_form .checkbox input{
+	padding-left:0;
+	margin-left:0;
+}
+#wprw_input_form{
+	border-radius: 4px;
+	font-size: 15px;
+	padding: 15px;
+    margin: 5px;
+}
+#wprw_main_popup_form input, #wprw_input_form input{
+	background:#ffffff;
+	height: 40px;
+}
+
+#wprw_wincoupon_container .icon, #wprw-btnSpin .icon{
+	vertical-align: initial;
+    margin-right: 10px;
+}
+#wprw-btnSpin, #wprw-btnSpinPreview{
+	height: 57px;
+	font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+	letter-spacing: inherit;
+}
+#wprw_popup_header{
+	font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;
+}
+.wprw_custom_style .ui.form .field .checkbox > label{
+	font-size: 14.4px;
+}
+#wprw_main_popup_form label{
+	font-family: -apple-system, blinkmacsystemfont, "segoe ui", roboto, oxygen-sans, ubuntu, cantarell, "helvetica neue", helvetica, arial, sans-serif;
+	min-width: 250px;
+}
+#wprw_main_popup_form.ui.form .field {
+    display: flow-root;
+    text-align: left;
+}
+
+
+
+/* 5. Win / Lose PopUp Messages */
+#wprw_winlosediv{
+	display: none;
+	width: 100%;
+	background-color: rgba(137,137,137,0.568);
+    color: #ebebeb;
+    text-align: center;
+	padding: 10px;
+	border-radius: 3px;
+	font-size: 18px;
+	transition: all 0.5s ease 0s;
+	opacity:0;
+	line-height: 1.9em;
+	font-family: -apple-system, blinkmacsystemfont, "segoe ui", roboto, oxygen-sans, ubuntu, cantarell, "helvetica neue", helvetica, arial, sans-serif;
+	font-weight: 400;
+}
+#wprw_wincoupon_container{
+	display: none;
+	width: 100%;
+	padding: 10px;
+	border-radius: 3px;
+	margin-top: 15px;
+    background-color: #158f1e;
+    font-weight: 600;
+    text-align: center;
+    color: #ffffff;
+    font-size: 18px;
+    transition: all 0.5s ease 0s;
+    opacity:0;
+    line-height: 1.9em;
+    font-family: -apple-system, blinkmacsystemfont, "segoe ui", roboto, oxygen-sans, ubuntu, cantarell, "helvetica neue", helvetica, arial, sans-serif;
+}
+#wprw_wincoupon_container .icon {
+    float: unset;
+}
+
+/* 6. Modals (for Win / Lose in Shortcode Integration) */
+#wprw_modaltop{
+	display: flex;
+	justify-content: center;
+}
+#wprw_modalIconContainer{
+	width: 150px;
+}
+
+/* 7. Close Button */
+#wprw_close_button{
+	position: absolute;
+	top: 4%;
+	right: 3%;
+	font-size: 15px;
+    color: rgba(255,255,255,0.341);
+    z-index: 999;
+	font-family: -apple-system, blinkmacsystemfont, "segoe ui", roboto, oxygen-sans, ubuntu, cantarell, "helvetica neue", helvetica, arial, sans-serif;
+}
+#wprw_close_button:hover{
+	color: #e3e3e3;
+	cursor: pointer;
+}
+#wprw_close_button i{
+	color: inherit;
+}
+
+/* 8. Particles (Animation) Container */
+#particlesContainer{
+	position: fixed;
+	display: none;
+	width: 100%;
+	height: 100%;
+	z-index: 99999999;
+	user-select: none;
+	pointer-events: none;
+	top:0%;
+	right: 0%;
+}
+#particlesContainerPreview{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 99999999;
+	user-select: none;
+	pointer-events: none;
+}
+
+/* 9. Responsive Media Queries */
+@media only screen and (max-width:500px) {
+	#wprw-popUpContent{
+		width:100%;
+		overflow-y:scroll;
+		overflow-x:hidden;
+	}
+	.wprw_wheel_popup_size{
+		font-size: 2.7vw;
+		margin-top:10%;
+	}
+	#wprw-btnSpin{
+		width: 100%;
+		font-size: 1.3em;
+	}
+	.wprw-spinner{
+		margin-top: 35px;
+	}
+	#wprw_popup_header{
+		font-size: 21px;
+	}
+	#wprw_popup_header_icon{
+		font-size: 31px;
+	}
+	#wprw_main_popup_form label{
+		font-size: 13px;
+	}
+}
+
+@media only screen and (min-width: 500px) and (max-width:876px) {
+	#wprw-popUpContent{
+		overflow-y:scroll;
+		overflow-x:hidden;
+		width:100%
+	}
+	.wprw_wheel_popup_size{
+		font-size: 1.7vw;
+		margin-top:10%;
+	}
+	#wprw-btnSpin{
+		width: 100%;
+		font-size: 19.5px;
+	}
+	.wprw-spinner{
+		margin-top: 15px;
+	}
+	#wprw_popup_header{
+		font-size: 21px;
+	}
+	#wprw_popup_header_icon{
+		font-size: 31px;
+	}
+	#wprw_main_popup_form label{
+		font-size: 13px;
+	}
+}
+
+@media only screen and (min-width: 768px){
+	#wprw-popUpContent{
+		display:flex;
+		align-items: center;
+	}
+}
+
+@media only screen and (min-width: 876px) {
+	#wprw-popUpContent{
+		width:876px;
+	}
+	.wprw_wheel_popup_size{
+		font-size: 15.55px;
+	}
+	#wprw-btnSpin{
+		width: 100%;
+	    font-size: 22.5px;
+	}
+	#wprw_popup_header{
+		font-size: 24px;
+	}
+	#wprw_popup_header_icon{
+		font-size: 37px;
+	}
+	#wprw_main_popup_form label{
+		font-size: 13.92px;
+	}
+
+}
